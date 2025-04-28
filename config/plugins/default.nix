@@ -2,6 +2,8 @@
   # Import all your configuration modules here
   imports = [ 
     ./telescope.nix
+    ./bufferline.nix
+    ./oil.nix
     #./treesitter.nix
     #./vimtex.nix
     #./startify.nix
@@ -36,18 +38,17 @@
       settings.user_default_options.names = false;
     };
 
-    oil = {
-      enable = true;
-      lazyLoad.settings.cmd = "Oil";
-    };
-
-    
     lualine.enable = true;
 
     treesitter.enable = true;
 
     luasnip.enable = true;
-  
+
+    todo-comments = {
+      enable = true;
+      settings.signs = true;
+    };
+
     lsp = {
       enable = true;
       servers = {
