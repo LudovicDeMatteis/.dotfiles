@@ -19,6 +19,7 @@
     ./trouble.nix
     ./noice.nix
     ./lint.nix
+    ./lspkind.nix
   ];
 
   plugins = {

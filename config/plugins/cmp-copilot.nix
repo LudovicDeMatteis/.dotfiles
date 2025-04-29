@@ -1,7 +1,4 @@
 {
-  plugins.copilot-cmp = {
-    enable = true;
-  };
   plugins.copilot-lua = {
     settings = {
       copilot = {
@@ -13,6 +10,10 @@
         };
       };
     };
+  };
+
+  plugins.copilot-cmp = {
+    enable = true;
   };
 
   extraConfigLua = ''

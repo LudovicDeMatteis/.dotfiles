@@ -67,6 +67,10 @@
       key = "<S-q>";
       mode = "n";
     }
-
+    {
+      action = ":LazyGit<CR>";
+      key = "<leader>gg";
+      mode = "n";
+    }
   ];
 }
