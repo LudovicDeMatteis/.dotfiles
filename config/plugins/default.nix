@@ -4,7 +4,9 @@
     ./telescope.nix
     ./bufferline.nix
     ./oil.nix
-    #./treesitter.nix
+    ./cmp.nix
+    ./treesitter.nix
+    ./lsp.nix
     #./vimtex.nix
     #./startify.nix
     #./neo-tree.nix
@@ -40,8 +42,6 @@
 
     lualine.enable = true;
 
-    treesitter.enable = true;
-
     luasnip.enable = true;
 
     todo-comments = {
@@ -49,19 +49,6 @@
       settings.signs = true;
     };
 
-    lsp = {
-      enable = true;
-      servers = {
-        # javascript / typescript
-        ts_ls.enable = true;
-        # lua
-        lua_ls.enable = true;
-        # python
-        pyright.enable = true;
-        # C++
-        clangd.enable = true;
-      };
-    };
   };
 }
 

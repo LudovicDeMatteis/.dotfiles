@@ -15,7 +15,7 @@
       constrain_cursor = "editable";
       default_file_explorer = true;
       view_options = {
-	show_hidden = false;
+	show_hidden = true;
       };
       win_options = {
 	concealcursor = "ncv";
