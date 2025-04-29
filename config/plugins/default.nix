@@ -8,13 +8,10 @@
     ./treesitter.nix
     ./lsp.nix
     ./which-key.nix
-    ./markdown_preview.nix
+    ./markdown-preview.nix
     #./vimtex.nix
-    #./startify.nix
     #./neo-tree.nix
-    #./neorg.nix
-    #./mardown-preview.nix
-    #./lualine.nix
+    ./lualine.nix
     #./lsp.nix
     #./harpoon.nix
     #./floaterm.nix
