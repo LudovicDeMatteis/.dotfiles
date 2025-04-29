@@ -7,6 +7,8 @@
     ./cmp.nix
     ./treesitter.nix
     ./lsp.nix
+    ./which-key.nix
+    ./markdown_preview.nix
     #./vimtex.nix
     #./startify.nix
     #./neo-tree.nix

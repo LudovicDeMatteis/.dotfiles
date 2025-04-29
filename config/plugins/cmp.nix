@@ -8,12 +8,12 @@
       settings = {
         autoEnableSources = true;
         experimental = {
-          ghost_text = false;
+          ghost_text = true;
         };
         performance = {
           debounce = 60;
           fetchingTimeout = 200;
-          maxViewEntries = 30;
+          maxViewEntries = 15;
         };
         snippet = {
           expand = "luasnip";
@@ -80,7 +80,7 @@
       enable = true;
     }; # snippets
     cmp-cmdline = {
-      enable = false;
+      enable = true;
     }; # autocomplete for cmdline
   };
   extraConfigLua = ''
