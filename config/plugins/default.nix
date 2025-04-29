@@ -14,15 +14,15 @@
     #./neo-tree.nix
     ./lualine.nix
     ./colorizer.nix
-    #./lsp.nix
-    ./harpoon.nix
-    # ./floaterm.nix
-    # ./comment.nix
-    # ./barbar.nix
+    ./conform.nix
+    # ./harpoon.nix
+    ./trouble.nix
+    ./noice.nix
+    ./lint.nix
   ];
 
   plugins = {
-    # lz-n.enable = true;
+    lz-n.enable = true;
 
     web-devicons.enable = true;
 
@@ -35,6 +35,8 @@
     };
 
     luasnip.enable = true;
+    nix.enable = true;
+    lazygit.enable = true;
   };
 }
 
