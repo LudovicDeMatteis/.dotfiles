@@ -9,18 +9,20 @@
     ./lsp.nix
     ./which-key.nix
     ./markdown-preview.nix
+    ./autopairs.nix
     #./vimtex.nix
     #./neo-tree.nix
     ./lualine.nix
+    ./colorizer.nix
     #./lsp.nix
-    #./harpoon.nix
-    #./floaterm.nix
-    #./comment.nix
-    #./barbar.nix
+    ./harpoon.nix
+    # ./floaterm.nix
+    # ./comment.nix
+    # ./barbar.nix
   ];
 
   plugins = {
-    lz-n.enable = true;
+    # lz-n.enable = true;
 
     web-devicons.enable = true;
 
@@ -32,22 +34,7 @@
       };
     };
 
-    nvim-autopairs.enable = true;
-
-    colorizer = {
-      enable = true;
-      settings.user_default_options.names = false;
-    };
-
-    lualine.enable = true;
-
     luasnip.enable = true;
-
-    todo-comments = {
-      enable = true;
-      settings.signs = true;
-    };
-
   };
 }
 
