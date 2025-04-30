@@ -7,5 +7,7 @@
 {
   imports = [
     ./neovim
+    ./git.nix
+    ./monitoring.nix
   ];
 }
