@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    ./neovim
+    ./modules
   ];
 
   programs = {
