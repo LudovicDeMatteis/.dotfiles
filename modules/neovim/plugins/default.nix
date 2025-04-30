@@ -20,6 +20,7 @@
     ./noice.nix
     ./lint.nix
     ./lspkind.nix
+    ./vimtex.nix
   ];
 
   programs.nixvim.plugins = {
