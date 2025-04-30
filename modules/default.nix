@@ -9,5 +9,6 @@
     ./neovim
     ./git.nix
     ./monitoring.nix
+    ./zsh.nix
   ];
 }
