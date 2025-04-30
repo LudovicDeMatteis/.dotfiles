@@ -1,47 +1,53 @@
 {
-  description = "A nixvim configuration";
+  description = "A simple flake for home-manager";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixvim.url = "github:nix-community/nixvim";
-    flake-parts.url = "github:hercules-ci/flake-parts";
+	nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+	flake-parts = {
+	      url = "github:hercules-ci/flake-parts";
+	      inputs.nixpkgs-lib.follows = "nixpkgs";
+	    };
+
+	home-manager = {
+	    type = "github";
+	    owner = "nix-community";
+	    repo = "home-manager";
+	    inputs.nixpkgs.follows = "nixpkgs";
+	  };
+
+	nixvim = {
+	      url = "github:nix-community/nixvim";
+	      inputs.nixpkgs.follows = "nixpkgs";
+	    };
   };
 
-  outputs =
-    { nixvim, flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [
-        "x86_64-linux"
-        "aarch64-linux"
-        "x86_64-darwin"
-        "aarch64-darwin"
-      ];
-
+  outputs = inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
       perSystem =
-        { system, ... }:
-        let
-          nixvimLib = nixvim.lib.${system};
-          nixvim' = nixvim.legacyPackages.${system};
-          nixvimModule = {
-            inherit system; # or alternatively, set `pkgs`
-            module = import ./config; # import the module directly
-            # You can use `extraSpecialArgs` to pass additional arguments to your module files
-            extraSpecialArgs = {
-              # inherit (inputs) foo;
-            };
-          };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
-        in
+        { pkgs, self', inputs', system, ... }:
         {
-          checks = {
-            # Run `nix flake check .` to verify that your config is not broken
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
-          };
-
-          packages = {
-            # Lets you run `nix run .` to start nixvim
-            default = nvim;
-          };
+	  packages = {
+	    inherit (inputs'.home-manager.packages) home-manager;
+	  };
         };
+	flake = 
+	  let
+	    system = "x86_64-linux";
+	    pkgs = import inputs.nixpkgs {
+	      system = "x86_64-linux";
+	      config = {
+		allowUnfree = true;
+	      };
+	    };
+	  in
+	  {
+	    homeConfigurations.ldematteis = inputs.home-manager.lib.homeManagerConfiguration {
+	      inherit pkgs;
+	      extraSpecialArgs = { inherit inputs; };
+	      modules = [ ./home.nix ];
+	    };
+	  };
     };
+
 }
