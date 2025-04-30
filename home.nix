@@ -26,7 +26,6 @@
       ncdu
       tlrc
       wget
-      btop
     ];
   };
 }
