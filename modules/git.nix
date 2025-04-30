@@ -56,7 +56,7 @@
     gcm = "git commit -m";
     gcmf = "git commit --amend --no-edit";
     gpsup = "git push upstream";
-    gadd = "git add";
+    gadd = "git add .";
     gp = "git push";
   };
 }
