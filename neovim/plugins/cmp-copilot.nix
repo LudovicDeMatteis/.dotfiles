@@ -1,5 +1,5 @@
 {
-  programs.nivim = {
+  programs.nixvim = {
     plugins.copilot-lua = {
       settings = {
         copilot = {
