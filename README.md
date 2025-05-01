@@ -1,18 +1,20 @@
-# Nixvim template
+# Home manager config
+This is my home manager configuration.
 
-This template gives you a good starting point for configuring nixvim standalone.
+## Modules
+For now, this is only a starting point. I used [NixVim](https://github.com/nix-community/nixvim) to configure my neovim plugins.
 
-## Configuring
-
-To start configuring, just add or modify the nix files in `./config`.
-If you add a new configuration file, remember to add it to the
-[`config/default.nix`](./config/default.nix) file
-
-## Testing your new configuration
-
-To test your configuration simply run the following command
-
+## Updating the configuration
+To update the home-manager configuration, use
 ```
-nix run .
+nix run .#home-manager -- switch --flake .
 ```
 
+
+# TODO
+## Additions
+- I want to add my configuration for several softwares, such as firefox and thunderbird.
+- I want to add a neovim plugin for running Jupyter notebook
+
+## Fixes
+It seems like I got some issue appearing when saving some files (e.g. this ReadMe), I should fix this
