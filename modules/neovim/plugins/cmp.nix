@@ -1,16 +1,32 @@
 {
   programs.nixvim.plugins = {
+    
+    cmp-buffer = { enable = true; };
+
+    cmp-emoji = { enable = true; };
+
+    cmp-nvim-lsp = { enable = true; };
+
+    cmp-path = { enable = true; };
+
+    cmp_luasnip = { enable = true; };
+
     cmp = {
       enable = true;
       autoEnableSources = true;
       settings = {
+        experimental = {
+          ghostText = {
+            enabled = true;
+          };
+        };
         # performance = {
         #   debounce = 60;
         #   fetchingTimeout = 200;
         #   maxViewEntries = 15;
         # };
         snippet = {
-          expand = "function(args) require('luasnip') .lsp_expand(args.body)  end";
+          expand = "function(args) require('luasnip').lsp_expand(args.body)  end";
         };
         sources = [
           { name = "copilot"; }

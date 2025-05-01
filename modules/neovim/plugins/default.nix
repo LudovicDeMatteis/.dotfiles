@@ -21,6 +21,7 @@
     ./lint.nix
     ./lspkind.nix
     ./vimtex.nix
+    ./luasnip.nix
   ];
 
   programs.nixvim.plugins = {
