@@ -26,6 +26,15 @@
       ncdu
       tlrc
       wget
-    ];
+      pkgs.fontconfig
+      imgcat
+      ripgrep
+      tmux
+      nerd-fonts.iosevka
+    ]; # ++ (builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts));
+  };
+
+  fonts = {
+    fontconfig.enable = true;
   };
 }

@@ -4,7 +4,7 @@
     autoLoad = true;
     settings = {
       columns = [
-	"icon"
+        "icon"
       ];
       keymaps = {
 	"<C-r>" = "actions.refresh";
