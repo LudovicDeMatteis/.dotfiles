@@ -22,6 +22,7 @@
     ./lspkind.nix
     ./vimtex.nix
     ./luasnip.nix
+    ./lspsaga.nix
   ];
 
   programs.nixvim.plugins = {
