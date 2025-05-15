@@ -31,7 +31,7 @@
       ripgrep
       tmux
       nerd-fonts.iosevka
-    ]; # ++ (builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts));
+    ]; 
   };
 
   fonts = {

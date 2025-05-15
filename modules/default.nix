@@ -11,5 +11,6 @@
     ./monitoring.nix
     ./viewers.nix
     ./zsh.nix
+    ./direnv.nix
   ];
 }
