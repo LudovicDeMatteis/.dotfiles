@@ -31,7 +31,6 @@
       ripgrep
       tmux
       nerd-fonts.iosevka
-      element-desktop
     ]; 
   };
 

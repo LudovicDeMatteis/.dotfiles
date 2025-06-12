@@ -7,6 +7,7 @@
     ./keymaps.nix
     ./options.nix
   ];
+
   home.shellAliases.v = "nvim";
 
   programs.nixvim = {
