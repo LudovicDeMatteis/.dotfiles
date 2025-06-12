@@ -31,6 +31,15 @@
       ripgrep
       tmux
       nerd-fonts.iosevka
+
+      # Messaging
+      discord
+
+      # Office
+      zotero
+
+      # Misc 
+      spotify
     ]; 
   };
 
