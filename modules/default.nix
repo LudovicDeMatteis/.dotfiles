@@ -12,5 +12,6 @@
     ./viewers.nix
     ./zsh.nix
     ./direnv.nix
+    ./element.nix
   ];
 }
