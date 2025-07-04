@@ -31,6 +31,7 @@
       ripgrep
       tmux
       nerd-fonts.iosevka
+      uv
 
       # Messaging
       discord
