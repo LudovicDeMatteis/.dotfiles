@@ -18,7 +18,7 @@
     };
   };
 
-  shellAliases = {
+  home.shellAliases = {
     element-desktop = "element-desktop --no-sandbox";
   };
 }

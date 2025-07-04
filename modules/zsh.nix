@@ -25,5 +25,13 @@
     enableZshIntegration = true;
   };
 
-  programs.bash.enable = true;
+  programs.bash = {
+    enable = true;
+    profileExtra = ''
+     export XDG_DATA_DIRS="/home/ldematteis/.nix-profile/share:$XDG_DATA_DIRS"
+    '';
+    bashrcExtra = ''
+      exec zsh
+    '';
+  };
 }
