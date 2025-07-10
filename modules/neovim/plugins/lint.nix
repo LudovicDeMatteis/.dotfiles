@@ -1,13 +1,13 @@
 {
   programs.nixvim.plugins = {
     lint = {
-      enable = true;
+      enable = false;
       lintersByFt = {
         text = ["vale"];
         markdown = ["vale"];
         dockerfile = ["hadolint"];
         terraform = ["tflint"];
-        python = ["pylint"];
+        python = ["pflake8"];
       };
     };
   };

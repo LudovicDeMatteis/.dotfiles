@@ -13,5 +13,7 @@
     ./zsh.nix
     ./direnv.nix
     ./element.nix
+    ./python.nix
+    ./nix.nix
   ];
 }

@@ -23,6 +23,7 @@
     ./vimtex.nix
     ./luasnip.nix
     ./lspsaga.nix
+    # ./python.nix
   ];
 
   programs.nixvim.plugins = {

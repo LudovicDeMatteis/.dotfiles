@@ -1,14 +1,15 @@
 {
   programs.nixvim.plugins = {
+    lsp-format = {
+      enable = true;
+      lspServersToEnable = "all";
+    };
+
     lsp = {
       enable = true;
       servers = {
-        # javascript / typescript
-        ts_ls.enable = true;
         # lua
         lua_ls.enable = true;
-        # python
-        pyright.enable = true;
         # C++
         clangd.enable = true;
       };
