@@ -49,13 +49,13 @@
             "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
           };
         };
-        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-          ublock-origin
-          onepassword-password-manager
-          # 1password-x-password-manager
-          zotero-connector
-          vimium
-        ];
+        # extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        #   ublock-origin
+        #   onepassword-password-manager
+        #   # 1password-x-password-manager
+        #   zotero-connector
+        #   vimium
+        # ];
       };
     };
   };
