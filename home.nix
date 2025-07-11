@@ -32,6 +32,8 @@
       tmux
       nerd-fonts.iosevka
       uv
+      ffmpeg_6
+      pay-respects
 
       # Messaging
       discord
