@@ -15,5 +15,6 @@
     ./element.nix
     ./python.nix
     ./nix.nix
+    ./firefox.nix
   ];
 }
