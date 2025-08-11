@@ -10,7 +10,6 @@
     ./which-key.nix
     ./markdown-preview.nix
     ./autopairs.nix
-    #./vimtex.nix
     #./neo-tree.nix
     ./lualine.nix
     ./colorizer.nix
@@ -21,6 +20,7 @@
     ./lint.nix
     ./lspkind.nix
     ./vimtex.nix
+    ./typst.nix
     ./luasnip.nix
     ./lspsaga.nix
     # ./python.nix
