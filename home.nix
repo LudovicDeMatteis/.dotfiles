@@ -32,6 +32,8 @@
       tmux
       nerd-fonts.iosevka
       uv
+      micromamba
+      pixi
       ffmpeg_6
       pay-respects
 
