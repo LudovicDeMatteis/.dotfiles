@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "Nix Home Manager Configs",
+  "version": "1.0.0",
+  "system_prompt": "You are assisting with a Nix Home Manager configuration repository. The codebase is organized into core configuration files, custom modules, and Neovim-specific configuration. Use the provided context to answer questions or generate code.",
+  "groups": [
+    {
+      "name": "Core Configuration",
+      "system_prompt": "Focus on the main entry points for Nix and Home Manager configuration.",
+      "data": [
+        "flake_nix",
+        "home_nix"
+      ]
+    },
+    {
+      "name": "Custom Modules",
+      "system_prompt": "These are custom modules for Home Manager, including user-defined configurations.",
+      "data": [
+        "modules_folder"
+      ]
+    },
+    {
+      "name": "Neovim Configuration",
+      "system_prompt": "Configuration specific to Neovim, located in the modules/neovim folder.",
+      "data": [
+        "neovim_folder"
+      ]
+    },
+    {
+      "name": "External Documentation",
+      "system_prompt": "Reference documentation for NixOS and Home Manager.",
+      "data": [
+        "home_manager_manual",
+        "nixos_manual"
+      ]
+    }
+  ],
+  "data": {
+    "flake_nix": {
+      "type": "file",
+      "path": "flake.nix",
+      "description": "Main Nix flake entry point for the configuration repository."
+    },
+    "home_nix": {
+      "type": "file",
+      "path": "home.nix",
+      "description": "Primary Home Manager configuration file."
+    },
+    "modules_folder": {
+      "type": "file",
+      "path": "modules/",
+      "description": "Folder containing custom Home Manager modules."
+    },
+    "neovim_folder": {
+      "type": "file",
+      "path": "modules/neovim/",
+      "description": "Folder containing Neovim-specific configuration modules."
+    },
+    "home_manager_manual": {
+      "type": "url",
+      "path": "https://nix-community.github.io/home-manager/index.html",
+      "description": "Official Home Manager manual for reference.",
+      "opts": {
+        "auto_restore_cache": true
+      }
+    },
+    "nixos_manual": {
+      "type": "url",
+      "path": "https://nixos.org/manual/nixos/stable/",
+      "description": "Official NixOS manual for reference.",
+      "opts": {
+        "auto_restore_cache": true
+      }
+    }
+  }
+}
+

@@ -20,11 +20,11 @@
             enabled = true;
           };
         };
-        # performance = {
-        #   debounce = 60;
-        #   fetchingTimeout = 200;
-        #   maxViewEntries = 15;
-        # };
+        performance = {
+          debounce = 60;
+          fetchingTimeout = 200;
+          maxViewEntries = 5;
+        };
         snippet = {
           expand = "function(args) require('luasnip').lsp_expand(args.body)  end";
         };

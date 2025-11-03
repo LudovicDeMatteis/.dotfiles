@@ -42,6 +42,21 @@
     luasnip.enable = true;
     nix.enable = true;
     lazygit.enable = true;
+
+    codecompanion.enable = true;
   };
+  
+  programs.nixvim.keymaps = [
+    {
+      action = ":CodeCompanionChat<CR>";
+      key = "jt";
+      mode = "n";
+    }
+    {
+      action = "<Esc>$<CR>";
+      key = "jk";
+      mode = "i";
+    }
+  ];
 }
 
