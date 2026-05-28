@@ -1,5 +1,14 @@
 {
   programs.nixvim.plugins = {
+    cmp-ai = {
+      enable = true;
+      settings = {
+        provider = "Codestral";
+        provider_options = {
+          model = "codestral-latest";
+        };
+      };
+    };
     
     cmp-buffer = { enable = true; };
 
@@ -29,7 +38,8 @@
           expand = "function(args) require('luasnip').lsp_expand(args.body)  end";
         };
         sources = [
-          # { name = "copilot"; }
+          { name = "copilot"; }
+          { name = "cmp_ai"; }
           {
             name = "path"; # file system paths
           }

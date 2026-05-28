@@ -4,7 +4,8 @@
     ./telescope.nix
     ./bufferline.nix
     ./oil.nix
-    ./cmp.nix
+    ./cmp-ai.nix
+    ./cmp-copilot.nix
     ./treesitter.nix
     ./lsp.nix
     ./which-key.nix
@@ -23,7 +24,8 @@
     ./typst.nix
     ./luasnip.nix
     ./lspsaga.nix
-    # ./python.nix
+    ./python.nix
+    ./goto_preview.nix
   ];
 
   programs.nixvim.plugins = {

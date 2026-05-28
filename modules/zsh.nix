@@ -9,7 +9,6 @@
       # Aliases for common commands
       ll = "ls -l";
       la = "ls -a";
-      mamba = "micromamba";
     };
     initContent = ''
       export NIX_REMOTE=""

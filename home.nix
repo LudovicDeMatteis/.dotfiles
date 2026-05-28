@@ -49,6 +49,7 @@
       # Nixpkgs
       nix-update
       nixfmt-rfc-style
+      hayagriva
     ]; 
   };
 
