@@ -26,12 +26,15 @@
     ./lspsaga.nix
     ./python.nix
     ./goto_preview.nix
+    ./parrot.nix
   ];
 
   programs.nixvim.plugins = {
     lz-n.enable = true;
 
     web-devicons.enable = true;
+    rainbow-delimiters.enable = true;
+    refactoring.enable = true;
 
     gitsigns = {
       enable = true;
